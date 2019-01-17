@@ -6,4 +6,12 @@ class Product
     @price = price
     @quantity = quantity
   end
+
+  def vend
+    @quantity -= 1
+  end
+
+  def reload(amount)
+    @quantity += amount
+  end
 end

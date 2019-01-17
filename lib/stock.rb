@@ -7,6 +7,16 @@ class Stock
     @products = initial_products
   end
 
+  def vend_product(index)
+    product = @products[index]
+    product.vend
+  end
+
+  def reload_product(index, amount)
+    product = @products[index]
+    product.reload(amount)
+  end
+
   private
 
   def initial_products
