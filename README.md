@@ -13,3 +13,14 @@ Design a vending machine using ruby. The vending machine should perform as follo
 - There should be a way of reloading either products or change at a later point.
 
 - The machine should keep track of the products and change that it contains.
+
+How to launch the application:
+
+First install the appropriate gems with the command
+
+bundle
+
+then run the application with:
+
+ruby application.rb
+
