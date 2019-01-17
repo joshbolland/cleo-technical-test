@@ -1,6 +1,8 @@
 require_relative './stock'
 require_relative './change'
 require_relative './message'
+require_relative './vend'
+require_relative './reload'
 
 class Machine
   attr_reader :stock, :change, :message, :selection
@@ -15,7 +17,7 @@ class Machine
   def start
     loop do
       user_menu
-      user_selection
+      assign_selection
       handle_selection
     end
   end
@@ -26,7 +28,7 @@ class Machine
     @message.user_options
   end
 
-  def user_selection
+  def assign_selection
     input = gets.chomp.downcase
     return @selection = input if input == 'reload' || input == 'exit'
 
@@ -45,5 +47,9 @@ class Machine
 
   def vend(vend)
     vend.vend_product
+  end
+
+  def reload(reload)
+    reload.assign_selection_and_reload
   end
 end
