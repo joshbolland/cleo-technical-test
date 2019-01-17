@@ -11,7 +11,7 @@ class Reload
     @change = change
   end
 
-  def assign_selection_and_reload
+  def reload_selection
     @message.reload_options
     selection = gets.chomp.downcase
     return reload_change if selection == 'change'

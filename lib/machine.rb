@@ -17,7 +17,7 @@ class Machine
   def start
     loop do
       user_menu
-      assign_selection
+      user_selection
       handle_selection
     end
   end
@@ -28,7 +28,7 @@ class Machine
     @message.user_options
   end
 
-  def assign_selection
+  def user_selection
     input = gets.chomp.downcase
     return @selection = input if input == 'reload' || input == 'exit'
 
@@ -50,6 +50,6 @@ class Machine
   end
 
   def reload(reload)
-    reload.assign_selection_and_reload
+    reload.reload_selection
   end
 end

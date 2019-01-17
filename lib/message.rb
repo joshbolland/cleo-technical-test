@@ -4,7 +4,7 @@ class Message
   def start_message
     puts '*'.blue * 50
     puts ''
-    puts 'Hey! Cleo Vending Machine at your service 😋'
+    puts 'Hey there! Cleo Vending Machine at your service 😋'
     puts ''
     puts '*'.blue * 50
   end
@@ -63,11 +63,11 @@ class Message
   end
 
   def product_reload_successful(stock)
-    puts 'See my new stock count below:'
+    puts 'See my new stock count below:'.green
     stock.products.each_with_index do |product, index|
       puts "#{index + 1}. #{product.name} - Quantity remaining: #{product.quantity}"
     end
-    puts 'I feel nice and full now 😋 Thank you!'
+    puts 'I feel nice and full now 😋 Thank you!'.green
   end
 
   def coin_reload_successful
