@@ -12,4 +12,7 @@ Metrics/BlockLength:
   Enabled: false
 
 Documentation:
-    Enabled: false
+  Enabled: false
+
+Style/MultipleComparison:
+  Enabled: false
